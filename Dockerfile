@@ -1,5 +1,4 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
-USER 10001
 WORKDIR /src
 COPY ApiChoreo/ApiChoreo.csproj/ ./
 RUN dotnet restore
@@ -11,4 +10,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 EXPOSE 80
 COPY --from=build /app .
+USER 10001
 ENTRYPOINT ["dotnet", "ApiChoreo.dll"]
