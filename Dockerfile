@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
+USER Christian-777
 WORKDIR /src
 COPY ApiChoreo/ApiChoreo.csproj/ ./
 RUN dotnet restore
