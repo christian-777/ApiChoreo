@@ -1,0 +1,6 @@
+@ApiChoreo_HostAddress = http://localhost:5220
+
+GET {{ApiChoreo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
