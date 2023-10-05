@@ -18,7 +18,7 @@ namespace ApiChoreo.Controllers
             _logger = logger;
         }
 
-        [HttpGet("get",Name = "GetWeatherForecast")]
+        [HttpGet("get")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
