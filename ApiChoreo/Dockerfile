@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
 WORKDIR /src
-COPY ApiChoreo/ApiChoreo.csproj/ ./
+COPY ApiChoreo.csproj/ ./
 RUN dotnet restore
 COPY . .
 RUN dotnet build
